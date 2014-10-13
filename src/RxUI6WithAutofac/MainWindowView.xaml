@@ -1,0 +1,27 @@
+﻿<Window x:Class="RxUI6WithAutofac.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:reactiveUi="clr-namespace:ReactiveUI;assembly=ReactiveUI"
+        Title="Investigating the Navigation Stack..." Height="525" Width="525" Background="LightGray">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Button Padding="5" Margin="3,3,0,3" x:Name="BackButton">Back</Button>
+            <Button Padding="5" Margin="3,3,0,3" x:Name="NavigateToA">Navigate to A</Button>
+            <Button Padding="5" Margin="3,3,0,3" x:Name="NavigateToB">Navigate to B</Button>
+        </StackPanel>
+        <TextBlock DockPanel.Dock="Top" Margin="3" TextWrapping="Wrap">
+            <Bold>README:</Bold> Click the "Navigate to A" and "Navigate to B" buttons
+            a few times and watch the view and viewmodel numbers incremease. Then start
+            going back instead, and see that while the ViewModels are treated as a stack
+            there's a new view created each time. In other words, stateful VIEWS are
+            a Bad Plan.
+        </TextBlock>
+        <reactiveUi:RoutedViewHost x:Name="ViewHost" Margin="30">
+            <reactiveUi:RoutedViewHost.DefaultContent>
+                <Border Background="Black">
+                    <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center">Nothing to see here...</TextBlock>
+                </Border>
+            </reactiveUi:RoutedViewHost.DefaultContent>
+        </reactiveUi:RoutedViewHost>
+    </DockPanel>
+</Window>
