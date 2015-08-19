@@ -11,7 +11,7 @@
         </StackPanel>
         <TextBlock DockPanel.Dock="Top" Margin="3" TextWrapping="Wrap">
             <Bold>README:</Bold> Click the "Navigate to A" and "Navigate to B" buttons
-            a few times and watch the view and viewmodel numbers incremease. Then start
+            a few times and watch the view and viewmodel numbers increase. Then start
             going back instead, and see that while the ViewModels are treated as a stack
             there's a new view created each time. In other words, stateful VIEWS are
             a Bad Plan.

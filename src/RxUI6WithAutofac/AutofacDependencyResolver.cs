@@ -7,7 +7,7 @@ using Autofac.Core;
 using Splat;
 using IContainer = Autofac.IContainer;
 
-namespace ReactiveUI
+namespace RxUI6WithAutofac
 {
     public class AutofacDependencyResolver : IMutableDependencyResolver
     {
