@@ -3,3 +3,5 @@
 ################################################################################
 
 /src/packages
+/src/RxUI6WithAutofac/bin/Debug
+/src/RxUI6WithAutofac/obj/Debug
